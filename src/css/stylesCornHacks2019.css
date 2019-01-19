@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  background: black;
+}
+
+.videoOrganizer {
+  display: flex;
+  flex-direction: column;
+}
+.videoOrganizer .video:nth-of-type(1) {
+  margin-top: 45px;
+}
+
+.video {
+  display: flex;
+  background: #282828;
+  padding: 15px;
+  margin: 15px;
+}
+
+.videoColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.bodyClass {
+  display: flex;
+  flex-direction: row;
+  background: #323232;
+}
+
+.headerClass {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+  position: fixed;
+  justify-content: space-around;
+  width: 100%;
+  background: black;
+}
+.nav h2:nth-of-type(1) {
+  color: #0092cc;
+}
+.nav h2:nth-of-type(2) {
+  color: #ff3333;
+}
+.nav h2:nth-of-type(3) {
+  color: #dcd427;
+}
+.nav h3 {
+  color: #323232;
+  font-size: 32px;
+  margin: 9px;
+}
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav a:hover {
+  font-weight: bold;
+}
+.nav a a:hover {
+  font-weight: bold;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+.title h1 {
+  color: #969696;
+}
+
+.focusContent {
+  color: #969696;
+}
+
+/*# sourceMappingURL=stylesCornHacks2019.css.map */

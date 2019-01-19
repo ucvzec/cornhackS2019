@@ -1,0 +1,13 @@
+{
+	"port":80,
+
+	"distFolderPath": "dist",
+
+	"devFolderPath": "src",
+
+	"assetCategories": [
+		"img",
+		"js",
+		"css"
+	]
+}

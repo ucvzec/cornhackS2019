@@ -1,0 +1,13 @@
+<div class="video">
+    <img src="http://braccia.mynetgear.com/images/comingSoonCornHacks2019.png">
+    <div class="videoColumn">
+        {% for video in videoList %}
+            <h1 class="videoTitle">
+                {{video.videoTitle}}
+            </h1>
+            <h2 class="videoDescription">
+                {{video.videoDescription}}
+            </h2>
+        {% endfor %}
+    </div>
+</div>
