@@ -1,13 +1,10 @@
-<div class="video">
-    <img src="http://braccia.mynetgear.com/images/comingSoonCornHacks2019.png">
-    <div class="videoColumn">
-        {% for video in videoList %}
-            <h1 class="videoTitle">
-                {{video.videoTitle}}
-            </h1>
-            <h2 class="videoDescription">
-                {{video.videoDescription}}
-            </h2>
-        {% endfor %}
+<div class="card">
+    <video controls height='100' width='125'>
+        <source src="{{video.videoPath}}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>
+            {{video.videoTitle}}</h1>
+        <h2>
+            {{video.videoDescription}}</h2>
     </div>
-</div>
