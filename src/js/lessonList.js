@@ -99,13 +99,13 @@ function populate(typeOfList) {
 
 
 function createListLongVideo(video) {
-    Twig.renderFile('./src/view/videoListItem.twig', {video:video}, (err, html) => {
+    return Twig.renderFile('./src/view/videoListItem.twig', {video:video}, (err, html) => {
         html; // compiled string
       });
       
 }
 function createCardVideo(video) {
-    Twig.renderFile('./src/view/videoCard.twig', {video:video}, (err, html) => {
+    return Twig.renderFile('./src/view/videoCard.twig', {video:video}, (err, html) => {
         html; // compiled string
       });
 }
