@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const os = require("os");
 
 class Logger{
 
@@ -25,27 +26,31 @@ class Logger{
 		let barFill = new Array(message.length).fill("═");
 		
 		//sets up the top row
-		boxedMessage += `╔═${barFill}═╗`+"\n";
+		boxedMessage += `╔═${barFill}═╗${os.EOL}`;
 		
 		//sets up the middle row
-		boxedMessage += `║ ${message} ║`+"\n";
+		boxedMessage += `║ ${message} ║${os.EOL}`;
 
 		//sets up the bottom row
-		boxedMessage += `╚═${barFill}═╝`+"\n";
+		boxedMessage += `╚═${barFill}═╝${os.EOL}`;
 
 		return boxedMessage;
 	}
 
 	startMessageLog(){
-		this.logLine(this.boxedMessage(`Started logging at: ${this.timeStamp}.`),false);
+		this.logLine(this.boxMessage(`Started logging at: ${this.timeStamp}.`),false);
 	}
 
 	endMessageLog(){
-		this.logLine(this.boxedMessage(`Ended logging at: ${this.timeStamp}.`),false);
+		this.logLine(this.boxMessage(`Ended logging at: ${this.timeStamp}.`),false);
 	}
 
 	logLine(logMessage,timeStamp=true){
-		fs.appendFileSync(this.logPath,`${timeStamp?this.timeStamp():""}: ${logMessage}`+"\n");
+		fs.appendFileSync(this.logPath,`${timeStamp?this.timeStamp():""}: ${logMessage}${os.EOL}`);
 	}
 
 }
+
+module.exports = function makeLogger(logName,settings){
+	return new Logger(logName,settings);
+};

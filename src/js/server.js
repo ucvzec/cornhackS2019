@@ -4,7 +4,7 @@ const fs = require("fs");
 const express = require("express");
 const twig = require("twig");
 
-const {readVCF} = require(path.resolve(__dirname,"readVCF.js"));
+const {readVCF,loadVCFDescription} = require(path.resolve(__dirname,"readVCF.js"));
 
 const config = require(path.resolve(__dirname,"..","config.json"));
 
@@ -38,7 +38,9 @@ server.get('/[requestedCategory]/[fileName].[fileType]',(req,res)=>{
 
 server.get('/testplace',(req,res)=>{
 	res.render('videoCard', {
-		videoList: readVCF(path.resolve(__dirname,"..","vcf")),
+		videoList: readVCF(path.resolve(__dirname,"..","vcf"),{
+			description:true,
+		}),
 	});
 });
 
