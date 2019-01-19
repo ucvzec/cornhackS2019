@@ -1,6 +1,6 @@
 html{
   scroll-behavior: smooth;
-
+height: 100%;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Ubuntu Mono', monospace;
@@ -32,6 +32,7 @@ flex-direction: column;
 display: flex;
 flex-direction: row;
 background: #323232;
+height: 100%;
 }
 
 .headerClass {
@@ -157,6 +158,7 @@ html{
 body {
 background:$background;
 margin:0px;
+height:100%
 }
 .videoOrganizer {
 display: flex;
