@@ -1,7 +1,5 @@
 var showing = true;
 window.onload = function () {
-    var titleHeight = document.querySelector(".title").offsetHeight;
-    document.querySelector(".bodyClass").style.marginTop = titleHeight + "px";
     document.querySelector(".showMoreTranscript").addEventListener("click", () => {
         clickedShowMoreTranscript();
     });
