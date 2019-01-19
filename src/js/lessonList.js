@@ -49,19 +49,35 @@ function populate(typeOfList) {
         areaForItems.removeChild(areaForItems.lastChild);
     }
     for (var i = 0; i < listLessons.length; ++i) {
-        switch (typeOfList) {
-            case 0:
-                areaForItems.appendChild(createListLongVideo(less));
-                break;
-            case 2:
-                //grid
-                break;
+        if (listLessons[i].visible) {
+            switch (typeOfList) {
+                case 0:
+                    //list
+                    areaForItems.appendChild(createListLongVideo(listLessons[i]));
+                    break;
+                case 2:
+                    //grid
+                    break;
+            }
         }
     }
 }
 
-function createListLongVideo() {
-
+function createListLongVideo(video) {
+    server.get('/*', (req, res) => {
+        console.log(`recieved a request from ${req.ip} for ${req.originalUrl}`);
+        res.render('videoListItem', {
+            video: video
+        });
+    });
+}
+function createCardVideo(video) {
+    server.get('/*', (req, res) => {
+        console.log(`recieved a request from ${req.ip} for ${req.originalUrl}`);
+        res.render('videoCard', {
+            video: video
+        });
+    });
 }
 window.onscroll = function () {
     var titleHeight = document.querySelector(".title").offsetHeight;
