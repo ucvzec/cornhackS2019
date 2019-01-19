@@ -5,7 +5,6 @@ const express = require("express");
 const twig = require("twig");
 
 const {readVCF} = require(path.resolve(__dirname,"readVCF.js"));
-const 
 
 const config = require(path.resolve(__dirname,"..","config.json"));
 
