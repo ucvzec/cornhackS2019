@@ -419,8 +419,11 @@ color: #969696;
 }
 .lessonOptions{
 display: flex;
-justify-content: flex-end;
+justify-content: space-between;
 
+}
+.rightAlignRow{
+  display: flex;
 }
 .listButton{
 &:before{
