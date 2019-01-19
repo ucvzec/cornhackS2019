@@ -1,3 +1,4 @@
+import Twig from 'twig';
 var listLessons = [{
         name: "site one",
         imageURL: "https://1.bp.blogspot.com/--M8WrSToFoo/VTVRut6u-2I/AAAAAAAAB8o/dVHTtpXitSs/s1600/URL.png",
@@ -57,27 +58,24 @@ function populate(typeOfList) {
                     break;
                 case 2:
                     //grid
+                    areaForItems.appendChild(createCardVideo(listLessons[i]));
                     break;
             }
         }
     }
 }
 
+
 function createListLongVideo(video) {
-    server.get('/*', (req, res) => {
-        console.log(`recieved a request from ${req.ip} for ${req.originalUrl}`);
-        res.render('videoListItem', {
-            video: video
-        });
-    });
+    Twig.renderFile('./src/view/videoListItem.twig', {video:video}, (err, html) => {
+        html; // compiled string
+      });
+      
 }
 function createCardVideo(video) {
-    server.get('/*', (req, res) => {
-        console.log(`recieved a request from ${req.ip} for ${req.originalUrl}`);
-        res.render('videoCard', {
-            video: video
-        });
-    });
+    Twig.renderFile('./src/view/videoCard.twig', {video:video}, (err, html) => {
+        html; // compiled string
+      });
 }
 window.onscroll = function () {
     var titleHeight = document.querySelector(".title").offsetHeight;
