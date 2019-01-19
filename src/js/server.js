@@ -4,7 +4,8 @@ const fs = require("fs");
 const express = require("express");
 const twig = require("twig");
 
-const {readVCF,loadVCFDescription} = require(path.resolve(__dirname,"readVCF.js"));
+const {readVCF} = require(path.resolve(__dirname,"readVCF.js"));
+const 
 
 const config = require(path.resolve(__dirname,"..","config.json"));
 
@@ -42,6 +43,10 @@ server.get('/testplace',(req,res)=>{
 			description:true,
 		}),
 	});
+});
+
+server.get('/htmlStaging/[fileName]',(req,res)=>{
+	res.sendFile(path.resolve(__dirname,"..","html",req.params("fileName")));
 });
 
 server.get('/*',(req,res)=>{
