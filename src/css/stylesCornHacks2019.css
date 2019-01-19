@@ -1,5 +1,10 @@
 html {
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu Mono", monospace;
 }
 
 body {
@@ -31,6 +36,7 @@ body {
   display: flex;
   flex-direction: row;
   background: #323232;
+  height: 100%;
 }
 
 .headerClass {
@@ -155,6 +161,7 @@ html {
 body {
   background: black;
   margin: 0px;
+  height: 100%;
 }
 
 .videoOrganizer {
@@ -429,7 +436,11 @@ body {
 
 .lessonOptions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.rightAlignRow {
+  display: flex;
 }
 
 .listButton:before {
