@@ -90,7 +90,7 @@ server.get(/^\/(?:lesson|video)[s]?\/([0-9]+)$/,(req,res,next)=>{
 	}
 });
 
-let homeRoutingRegex = new RegExp("^\/(?:(?:home|root)(?:page)?)?[\/]?$","i");
+let homeRoutingRegex = new RegExp("^(?:\/(?:(?:(?:home|root)(?:page)?)?[\/]?)?)?$","i");
 //this handles routing for the home page
 server.get(homeRoutingRegex,(req,res,next)=>{
 	res.render('homepage',{
