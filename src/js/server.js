@@ -31,19 +31,27 @@ server.get('/:requestedCategory/:file',(req,res)=>{
 	let assetCategory = req.params.requestedCategory;
 	let file = req.params.file;
 
+	console.log(`Recieved asset request for ${req.originalUrl}`);
+
 	if( config.assetCategories.includes(req.params.requestedCategory) ){
 		
 		let filePath = path.resolve(__dirname, assetCategory, `${file}`);
 		
 		if(fs.existsSync(filePath)){
-			res.type(fileType).status(200).sendFile(filePath);
+			res.status(200).sendFile(filePath);
 		}
 	}
 	//https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 	res.status(404).end();
 
 });
-//This handler will handle serving gifs
+server.get('/lessonpage',(req,res)=>{
+	res.render('lessonsPageTwig', {
+		videoList: readVCF(path.resolve(__dirname,"..","vcf"),{
+			description:true
+		}),
+	})
+});
 
 server.get('/testplace',(req,res)=>{
 	res.render('videoCard', {
@@ -57,9 +65,6 @@ server.get('/testplace',(req,res)=>{
 server.get('/*',(req,res)=>{
 	console.log(`Recieved a request for ${req.originalUrl}`);
 	console.log(`recieved a request from ${req.ip} for ${req.originalUrl}`);
-	res.render('test',{
-		helloMessage:"Hello Twig World!"
-	});
 });
 
 logger.logLine("Finished setting up routes.");
