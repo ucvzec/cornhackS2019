@@ -1,9 +1,9 @@
 window.onload = function () {
     if (window.location.href.includes("video")) {
-        document.querySelector(".headerClass").appendChild(twigGetReturnHeader())
+        document.querySelector(".headerClass").innerHTML=twigGetReturnHeader();
 
     } else {
-        document.querySelector(".headerClass").appendChild(twigGetTwoLayerHeader())
+        document.querySelector(".headerClass").appendChild(twigGetTwoLayerHeader());
 
     }
 
