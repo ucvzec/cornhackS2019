@@ -90,6 +90,14 @@ server.get(/^\/(?:lesson|video)[s]?\/([0-9]+)$/,(req,res,next)=>{
 	}
 });
 
+let homeRoutingRegex = new RegExp("^\/(?:(?:home|root)(?:page)?)?[\/]?$","i");
+//this handles routing for the home page
+server.get(homeRoutingRegex,(req,res,next)=>{
+	res.render('homepage',{
+
+	});
+});
+
 //this handles all of the static first level pages, and serves them if they are matched
 server.get('/*',(req,res,next)=>{
 
@@ -111,7 +119,7 @@ server.get('/*',(req,res,next)=>{
 
 server.get('/*',(req,res)=>{
 	logger.logAndConsole(`Reached end route and recieved no instructions for ${req.path} from ${req.get("Referer")}`);
-	res.send("end route");
+	page404(res);
 });
 
 logger.logLine("Finished setting up routes.");

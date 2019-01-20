@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="css/stylesCornHacks2019.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet"/>
+</head>
+<body>
+    <div class="homePage">
+        <div class="headerClass">
+            {% include 'twigElements/headerTwoLayer.twig' %}
+        </div>
+        <div class="bodyClass">
+            <div class="sideBar"></div>
+            <div class="focusContent">
+                <!--The content will do in here, throught the use of a embed tag-->
+                {% block content %}
+                    <h1>Example Content</h1>
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+</body>
+{% include 'twigJSFiles/header.twig' %}
+{% block scriptImport %}
+    <script>
+        console.log("example script");
+    </script>
+{% endblock scriptImport %}

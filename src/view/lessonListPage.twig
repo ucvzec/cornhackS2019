@@ -1,36 +1,25 @@
-<head>
-    <link rel="stylesheet" href="css/stylesCornHacks2019.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet"/>
-</head>
-<body>
-    <div class="homePage">
-        <div class="headerClass">
-            {% include 'twigElements/headerTwoLayer.twig' %}
-        </div>
-        <div class="bodyClass">
-            <div class="sideBar"></div>
-            <div class="focusContent">
-                <div class="lessons">
-                    <div class="lessonOptions">
-                        <input class="searchInput" placeholder="Search the site" type="search"/>
-                        <div class="rightAlignRow">
-                            <a href="#">
-                                <h1 class='listButton'>&#9776;</h1>
-                            </a>
-                            <a href="#">
-                                <h1 class="gridButton">&#9638;</h1>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="list">
-                        {% for video in videoList %}
-                            {% include './twigElements/videoCard.twig' %}
-                        {% endfor %}
-                    </div>
+{% embed 'standardoutline.twig' %}
+    {% block content %}
+        <div class="lessons">
+            <div class="lessonOptions">
+                <input class="searchInput" placeholder="Search the site" type="search"/>
+                <div class="rightAlignRow">
+                    <a href="#">
+                        <h1 class='listButton'>&#9776;</h1>
+                    </a>
+                    <a href="#">
+                        <h1 class="gridButton">&#9638;</h1>
+                    </a>
                 </div>
             </div>
+            <div class="list">
+                {% for video in videoList %}
+                    {% include 'twigElements/videoCard.twig' %}
+                {% endfor %}
+            </div>
         </div>
-    </div>
-</body>
-{% include 'twigJSFiles/header.twig' %}
-{% include 'twigJSFiles/lessonsPage.twig' %}
+    {% endblock content %}
+    {% block scriptImport %}
+        {% include 'twigJSFiles/lessonsPage.twig' %}
+    {% endblock scriptImport %}
+{% endembed %}
