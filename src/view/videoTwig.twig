@@ -8,6 +8,7 @@
 <body>
   <div class="homePage">
     <div class="headerClass">
+        {% include 'twigElements/returnHeader.twig' %}
 
     </div>
 
@@ -15,7 +16,9 @@
       <div class="sideBar">
       </div>
       <div class="focusContent">
-        
+      <!--find video by id for below-->
+        {% include 'twigElements/videoPage.twig' with {'video': } %}
+
       </div>
     </div>
   </div>
