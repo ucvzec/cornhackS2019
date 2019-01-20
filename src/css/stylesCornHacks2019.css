@@ -463,6 +463,14 @@ body {
   left: 0;
   right: 0;
   padding-left: 10px;
+  text-decoration: none;
+}
+.backArrow h1 {
+  text-decoration: none;
+}
+.backArrow a {
+  color: white;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=stylesCornHacks2019.css.map */
