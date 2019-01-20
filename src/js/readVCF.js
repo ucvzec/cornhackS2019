@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const logger = require(path.resolve(__dirname,"logger.js")("vcf");
+const logger = require(path.resolve(__dirname,"logger.js")("vcf"));
 
 //tasks is a map that will talk about what fields we need to load from paths.
 //current task options: description | article
