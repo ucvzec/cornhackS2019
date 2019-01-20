@@ -48,6 +48,10 @@ class Logger{
 	logLine(logMessage,timeStamp=true){
 		fs.appendFileSync(this.logPath,`${timeStamp?this.timeStamp():""}: ${logMessage}${os.EOL}`);
 	}
+	logAndConsole(logMessage,timeStamp=true){
+		console.log(logMessage);
+		this.logLine(logMessage,timeStamp);
+	}
 
 }
 

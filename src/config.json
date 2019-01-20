@@ -9,5 +9,16 @@
 		"img",
 		"js",
 		"css"
-	]
+	],
+	"resourceTypes": [
+		"js",
+		"css",
+		"png",
+		"jpg",
+		"ico"
+	],
+
+	"staticTopLevelPages": {
+		"home": "homepage"
+	}
 }

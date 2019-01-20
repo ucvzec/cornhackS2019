@@ -36,11 +36,9 @@ function loadVCFDescription(vcfObj){
 
 	if(fs.existsSync(descriptionPath)){
 		vcfObj.videoDescription = fs.readFileSync(descriptionPath);
-		console.log(`Sucessfully loaded description from ${descriptionPath}`);
-		logger.logLine(`Sucessfully loaded description from ${descriptionPath}`);
+		logger.logAndConsole(`Sucessfully loaded description from ${descriptionPath}`);
 	}else{
-		console.log(`Failed to load description from ${descriptionPath}`);
-		logger.logLine(`Failed to load description from ${descriptionPath}`);
+		logger.logAndConsole(`Failed to load description from ${descriptionPath}`);
 	}
 }
 function loadVCFArticle(vcfObj){
@@ -48,11 +46,9 @@ function loadVCFArticle(vcfObj){
 
 	if(fs.existsSync(vcfObj.videoArticlePath)){
 		vcfObj.videoArticle = fs.readFileSync(articlePath);
-		console.log(`Sucessfully loaded article from ${descriptionPath}`);
-		logger.logLine(`Sucessfully loaded article from ${descriptionPath}`);
+		logger.logAndConsole(`Sucessfully loaded article from ${descriptionPath}`);
 	}else{
-		console.log(`Failed to load article from ${articlePath}`);
-		logger.logLine(`Failed to load article from ${articlePath}`);
+		logger.logAndConsole(`Failed to load article from ${articlePath}`);
 	}
 }
 
