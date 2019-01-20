@@ -1,22 +1,23 @@
 html {
   scroll-behavior: smooth;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Ubuntu Mono", monospace;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu Mono', monospace;
   color: black;
 }
-
+a:hover {
+  font-weight: bold;
+}
+a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6 {
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
 body {
   margin: 0px;
   background: black;
 }
-
 .videoOrganizer {
   display: flex;
   flex-direction: column;
@@ -24,30 +25,25 @@ body {
 .videoOrganizer .video:nth-of-type(1) {
   margin-top: 45px;
 }
-
 .video {
   display: flex;
   background: #282828;
   padding: 15px;
   margin: 15px;
 }
-
 .videoColumn {
   display: flex;
   flex-direction: column;
 }
-
 .bodyClass {
   display: flex;
   flex-direction: row;
   background: #323232;
 }
-
 .headerClass {
   display: flex;
   flex-direction: column;
 }
-
 .nav {
   display: flex;
   flex-direction: row;
@@ -61,7 +57,7 @@ body {
   color: #0092cc;
 }
 .nav h2:nth-of-type(2) {
-  color: #ff3333;
+  color: #f33;
 }
 .nav h2:nth-of-type(3) {
   color: #dcd427;
@@ -81,7 +77,6 @@ body {
 .nav a a:hover {
   font-weight: bold;
 }
-
 .title {
   display: flex;
   flex-direction: row;
@@ -92,20 +87,16 @@ body {
   right: 0;
   background: black;
 }
-
 .title h1 {
   color: #969696;
 }
-
 .focusContent {
   color: #969696;
 }
-
 .columnListItem {
   display: flex;
   flex-direction: column;
 }
-
 .listItem {
   display: flex;
   width: 100%;
@@ -115,7 +106,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -125,26 +115,21 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card h1,
-.card h2,
-.card h3 {
+.card h1, .card h2, .card h3 {
   margin: 3px;
 }
-
 .list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
-
 .list .card {
   background: gray;
   height: 450px;
   width: 100%;
   margin: 2%;
 }
-
 @media (min-width: 40rem) {
   .list .card {
     width: 46%;
@@ -162,17 +147,14 @@ body {
   padding: 3.5%;
   padding-bottom: 3px;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   background: black;
   margin: 0px;
   height: 100%;
 }
-
 .videoOrganizer {
   display: flex;
   flex-direction: column;
@@ -180,30 +162,25 @@ body {
 .videoOrganizer .video:nth-of-type(1) {
   margin-top: 45px;
 }
-
 .video {
   display: flex;
   background: #282828;
   padding: 15px;
   margin: 15px;
 }
-
 .videoColumn {
   display: flex;
   flex-direction: column;
 }
-
 .bodyClass {
   display: flex;
   flex-direction: row;
   background: #323232;
 }
-
 .headerClass {
   display: flex;
   flex-direction: column;
 }
-
 .nav {
   display: flex;
   flex-direction: row;
@@ -217,7 +194,7 @@ body {
   color: #0092cc;
 }
 .nav h2:nth-of-type(2) {
-  color: #ff3333;
+  color: #f33;
 }
 .nav h2:nth-of-type(3) {
   color: #dcd427;
@@ -237,7 +214,6 @@ body {
 .nav a a:hover {
   font-weight: bold;
 }
-
 .title {
   display: flex;
   flex-direction: row;
@@ -248,39 +224,33 @@ body {
   right: 0;
   background: black;
 }
-
 .title h1 {
   color: #969696;
 }
-
 .focusContent {
   color: #969696;
   width: 100%;
 }
-
 video {
   z-index: 0;
   width: 45vw;
   height: 30vw;
 }
-
 .videoDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
 }
-
 .title {
   z-index: 1;
 }
-
 .downloads {
   display: flex;
   justify-content: flex-end;
 }
 .downloads div {
-  color: #F0F0F0;
+  color: #f0f0f0;
   margin: 9px;
   padding: 0px;
 }
@@ -294,23 +264,19 @@ video {
 .downloads a:hover {
   font-weight: bold;
 }
-
 .mp4Download h4 {
-  border: 2px solid #ff3333;
-  background: #ff3333;
+  border: 2px solid #f33;
+  background: #f33;
 }
-
 .mp3Download h4 {
   border: 2px solid #0092cc;
   background: #0092cc;
 }
-
 .belowVideo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
 .transcript {
   height: 150px;
   border-bottom: 5px solid black;
@@ -324,7 +290,6 @@ video {
 .transcript h4 {
   margin: 0px;
 }
-
 .rightAlign {
   display: flex;
   justify-content: flex-end;
@@ -332,28 +297,23 @@ video {
 .rightAlign:hover {
   font-weight: bold;
 }
-
 .showMoreTranscript {
-  color: #F0F0F0;
+  color: #f0f0f0;
 }
 .showMoreTranscript:hover {
   font-weight: bold;
 }
-
 .bodyClass {
   padding: 0px 20px;
   background: #969696;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0px;
   background: black;
 }
-
 .videoOrganizer {
   display: flex;
   flex-direction: column;
@@ -361,30 +321,25 @@ body {
 .videoOrganizer .video:nth-of-type(1) {
   margin-top: 45px;
 }
-
 .video {
   display: flex;
   background: #282828;
   padding: 15px;
   margin: 15px;
 }
-
 .videoColumn {
   display: flex;
   flex-direction: column;
 }
-
 .bodyClass {
   display: flex;
   flex-direction: row;
   background: #323232;
 }
-
 .headerClass {
   display: flex;
   flex-direction: column;
 }
-
 .nav {
   display: flex;
   flex-direction: row;
@@ -398,7 +353,7 @@ body {
   color: #0092cc;
 }
 .nav h2:nth-of-type(2) {
-  color: #ff3333;
+  color: #f33;
 }
 .nav h2:nth-of-type(3) {
   color: #dcd427;
@@ -418,7 +373,6 @@ body {
 .nav a a:hover {
   font-weight: bold;
 }
-
 .title {
   display: flex;
   flex-direction: row;
@@ -429,24 +383,19 @@ body {
   right: 0;
   background: black;
 }
-
 .title h1 {
   color: #969696;
 }
-
 .focusContent {
   color: #969696;
 }
-
 .lessonOptions {
   display: flex;
   justify-content: space-between;
 }
-
 .rightAlignRow {
   display: flex;
 }
-
 .backArrow {
   z-index: 3;
   position: fixed;
@@ -463,15 +412,22 @@ body {
   color: white;
   text-decoration: none;
 }
-
 .gridButton {
   padding-left: 30px;
 }
-
+.gridButton:hover {
+  font-weight: bold;
+}
 .listButton {
   margin-top: 15px;
 }
-
+.listButton:hover {
+  font-weight: bold;
+}
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
 .searchInput {
   background: #969696;
   border: 0px;
@@ -480,5 +436,3 @@ body {
   width: 50%;
   -webkit-text-fill-color: black;
 }
-
-/*# sourceMappingURL=stylesCornHacks2019.css.map */

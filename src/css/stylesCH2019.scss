@@ -9,7 +9,26 @@ h4,
 h5,
 h6 {
   font-family: 'Ubuntu Mono', monospace;
-  color:black;
+  color: black;
+}
+
+a:hover {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+  }
+
+  font-weight: bold;
+}
+
+a {
+
+  text-decoration: none;
 }
 
 body {
@@ -547,11 +566,26 @@ body {
 
 .gridButton {
   padding-left: 30px;
+
+}
+
+.gridButton:hover {
+  font-weight: bold;
+
 }
 
 .listButton {
   margin-top: 15px;
+}
 
+.listButton:hover {
+  font-weight: bold;
+
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .searchInput {
