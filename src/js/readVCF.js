@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const logger = require(path.resolve(__dirname,"logger.js")("vcf");
+const logger = require(path.resolve(__dirname,"logger.js"))("vcf");
 
 //tasks is a map that will talk about what fields we need to load from paths.
 //current task options: description | article
@@ -46,10 +46,10 @@ function loadVCFDescription(vcfObj){
 function loadVCFArticle(vcfObj){
 	let articlePath = path.resolve(__dirname,vcfObj.videoArticlePath);
 
-	if(fs.existsSync(vcfObj.videoArticlePath)){
+	if(fs.existsSync(articlePath)){
 		vcfObj.videoArticle = fs.readFileSync(articlePath);
-		console.log(`Sucessfully loaded article from ${descriptionPath}`);
-		logger.logLine(`Sucessfully loaded article from ${descriptionPath}`);
+		console.log(`Sucessfully loaded article from ${articlePath}`);
+		logger.logLine(`Sucessfully loaded article from ${articlePath}`);
 	}else{
 		console.log(`Failed to load article from ${articlePath}`);
 		logger.logLine(`Failed to load article from ${articlePath}`);
