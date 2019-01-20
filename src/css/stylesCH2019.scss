@@ -549,17 +549,20 @@ body {
   text-decoration: none;
 }
 
-.gridButton{
-  padding-left:30px;
+.gridButton {
+  padding-left: 30px;
 }
-.listButton{
+
+.listButton {
   margin-top: 15px;
 
 }
+
 .searchInput {
   background: #969696;
   border: 0px;
   height: 3%;
   margin: 20px;
   width: 50%;
+  -webkit-text-fill-color: black;
 }

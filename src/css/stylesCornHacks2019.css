@@ -484,6 +484,7 @@ body {
   height: 3%;
   margin: 20px;
   width: 50%;
+  -webkit-text-fill-color: black;
 }
 
 /*# sourceMappingURL=stylesCornHacks2019.css.map */
