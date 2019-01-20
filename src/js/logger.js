@@ -23,7 +23,7 @@ class Logger{
 	boxMessage(message){
 		let boxedMessage = "";
 		
-		let barFill = new Array(message.length).fill("═");
+		let barFill = new Array(message.length).fill("═").join('');
 		
 		//sets up the top row
 		boxedMessage += `╔═${barFill}═╗${os.EOL}`;

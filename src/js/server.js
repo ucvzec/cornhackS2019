@@ -5,8 +5,11 @@ const express = require("express");
 const twig = require("twig");
 
 const {readVCF} = require(path.resolve(__dirname,"readVCF.js"));
+const logger = require(path.resolve(__dirname,"logger.js"))("server");
 
 const config = require(path.resolve(__dirname,"..","config.json"));
+
+logger.logLine("Loaded Dependencies.");
 
 const server = express();
 
@@ -15,16 +18,22 @@ const server = express();
 server.set('views',path.resolve(__dirname,"..","view"));
 server.set('view engine','twig');
 
-//This handler will handle image requests
-server.get('/[requestedCategory]/[fileName].[fileType]',(req,res)=>{
-	
-	let assetCategory = req.params("requestedCategory");
-	let fileName = req.params("fileName");
-	let fileType = req.params("fileType");
+logger.logLine("Set view engine variables.");
 
-	if( config.assetCategories.contains( req.params(requestedCategory) ) ){
+//This handler will handle image requests
+
+
+server.get('/htmlStaging/:fileName',(req,res)=>{
+	res.sendFile(path.resolve(__dirname,"..","html",req.params.fileName));
+});
+
+server.get('/:requestedCategory/:file',(req,res)=>{
+	let assetCategory = req.params.requestedCategory;
+	let file = req.params.file;
+
+	if( config.assetCategories.includes(req.params.requestedCategory) ){
 		
-		let filePath = path.resolve(__dirname, assetCategory, `${fileName}.${fileType}`);
+		let filePath = path.resolve(__dirname, assetCategory, `${file}`);
 		
 		if(fs.existsSync(filePath)){
 			res.type(fileType).status(200).sendFile(filePath);
@@ -44,17 +53,18 @@ server.get('/testplace',(req,res)=>{
 	});
 });
 
-server.get('/htmlStaging/[fileName]',(req,res)=>{
-	res.sendFile(path.resolve(__dirname,"..","html",req.params("fileName")));
-});
 
 server.get('/*',(req,res)=>{
+	console.log(`Recieved a request for ${req.originalUrl}`);
 	console.log(`recieved a request from ${req.ip} for ${req.originalUrl}`);
 	res.render('test',{
 		helloMessage:"Hello Twig World!"
 	});
 });
 
+logger.logLine("Finished setting up routes.");
+
 server.listen(config.port,()=>{
 	console.log(`Server is listening for traffic on ${config.port}!`);
+	logger.logLine(`Server is now running on port ${config.port}.`);
 });
