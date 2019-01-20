@@ -1,37 +1,5 @@
-var listLessons = [{
-        name: "site one",
-        imageURL: "https://1.bp.blogspot.com/--M8WrSToFoo/VTVRut6u-2I/AAAAAAAAB8o/dVHTtpXitSs/s1600/URL.png",
-        typeOfSite: "Drupal 8.6.2",
-        jobNumber: "Job #",
-        baseSiteURL: "SiteOne",
-        visible: true
-    },
-    {
-        name: "site two",
-        imageURL: "https://1.bp.blogspot.com/--M8WrSToFoo/VTVRut6u-2I/AAAAAAAAB8o/dVHTtpXitSs/s1600/URL.png",
-        typeOfSite: "Drupal 7.5.9",
-        jobNumber: "55555",
-        baseSiteURL: "SiteTwo",
-        visible: true
-    },
-    {
-        name: "site tres",
-        imageURL: "https://1.bp.blogspot.com/--M8WrSToFoo/VTVRut6u-2I/AAAAAAAAB8o/dVHTtpXitSs/s1600/URL.png",
-        typeOfSite: "Static",
-        jobNumber: "33333",
-        baseSiteURL: "siteThree",
-        visible: true
-    },
-    {
-        name: "a site",
-        imageURL: "https://1.bp.blogspot.com/--M8WrSToFoo/VTVRut6u-2I/AAAAAAAAB8o/dVHTtpXitSs/s1600/URL.png",
-        typeOfSite: "Static",
-        jobNumber: "666666",
-        baseSiteURL: "ASiteForSR",
-        visible: true
-    }
-];
-var listOrig = JSON.parse(JSON.stringify(listLessons));
+var listLessons;
+//need to get var list lessons
 window.onload = function () {
     createTheSearchAndSetup();
     setAllVisible();
@@ -57,7 +25,6 @@ function determineVisibility() {
 function setAllVisible() {
     for (var i = 0; i < listLessons.length; i++) {
         listLessons[i].visible = true;
-        listOrig[i].visible = true;
     }
 }
 
@@ -72,7 +39,6 @@ function determineSortVisibility() {
                     if (!listLessons[i].name.includes(searchText)) {
                         if (!listLessons[i].baseSiteURL.includes(searchText)) {
                             listLessons[i].visible = false;
-                            listOrig[i].visible = false;
                         }
                     }
                 }
@@ -83,23 +49,32 @@ function determineSortVisibility() {
 
 function populate(typeOfList) {
     var areaForItems = document.querySelector(".lessons");
-    while (areaForItems.hasChildNodes()) {
-        areaForItems.removeChild(areaForItems.lastChild);
-    }
-    //TODO Reimplement this
-    for (var i = 0; i < listLessons.length; ++i) {
-        if (listLessons[i].visible) {
-            switch (typeOfList) {
-                case 0:
-                    //list
-                    break;
-                case 2:
-                    //grid
-                    break;
-            }
+    var lessons = areaForItems.querySelectorAll("div");
+    for (var i = 0; i < lessons.length; ++i) {
+        if (!listLessons[i].visible) {
+            lessons[i].style.display = 'none';
+        } else {
+            lessons[i].style.display = 'flex';
+
         }
+        switch (typeOfList) {
+            case 0:
+                //list
+                if (lessons[i].class === "listItem") {
+                    lessons[i].class = "card";
+                }
+                break;
+            case 2:
+                //grid
+                if (lessons[i].class === "card") {
+                    lessons[i].class = "listItem";
+                }
+                break;
+        }
+
     }
 }
+
 
 
 //http://developer.blackberry.com/design/bb10/color.html
