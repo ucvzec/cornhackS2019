@@ -15,6 +15,7 @@ window.onload = function () {
 
 }
 window.onscroll = function () {
+    
     if (document.querySelector(".nav") != null) {
         var titleHeight = document.querySelector('.title').offsetHeight;
         var pos = titleHeight - window.pageYOffset;

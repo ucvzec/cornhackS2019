@@ -2,8 +2,8 @@
     <link rel="stylesheet" href="css/stylesCornHacks2019.css"/>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet"/>
     {% include 'twigJSFiles/header.twig' %}
+{% include 'twigJSFiles/lessonsPage.twig' %}
 </head>
-
 <body>
     <div class="homePage">
         <div class="headerClass">
@@ -16,8 +16,12 @@
                     <div class="lessonOptions">
                         <input class="searchInput" placeholder="Search the site" type="search"/>
                         <div class="rightAlignRow">
-                            <h1 class='listButton'>&#9776;</h1>
-                            <h1 class="gridButton">&#9638;</h1>
+                            <a href="#">
+                                <h1 class='listButton'>&#9776;</h1>
+                            </a>
+                            <a href="#">
+                                <h1 class="gridButton">&#9638;</h1>
+                            </a>
                         </div>
                     </div>
                     <div class="list">

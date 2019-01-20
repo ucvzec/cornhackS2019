@@ -1,0 +1,112 @@
+<script>
+    var listLessons=null;
+    // need to get var list lessons
+    window.onload = function () {
+        
+    var titleHeight = document.querySelector(".title").offsetHeight;
+
+        document.querySelector(".nav").style.top = titleHeight + "px";
+        var headerHeight =
+            document.querySelector(".title").offsetHeight +
+            document.querySelector(".nav").offsetHeight;
+        document.querySelector(".bodyClass").style.marginTop = headerHeight + "px";
+
+        listLessons = retrieveFields();
+        console.log(listLessons);
+                console.log(listLessons[0]);
+
+        createTheSearchAndSetup();
+        setAllVisible();
+        populate(0);
+        document.querySelector(".listButton").addEventListener("click", () => {
+            populate(0);
+        });
+        document.querySelector(".gridButton").addEventListener("click", () => {
+            populate(1);
+        });
+    };
+    function retrieveFields() {
+        let videoList = [];
+        let card = document.querySelector(".list").firstElementChild;
+        while (card !== null) {
+            let video = {};
+            video.card = card;
+            let infoContainer = card.firstElementChild.nextElementSibling;
+            video.title = infoContainer.childNodes[1].textContent;
+            let temp = infoContainer.childNodes[3].textContent.split(" - ");
+            video.author = temp[0];
+            video.date = temp[1];
+            video.description = infoContainer.childNodes[5].textContent;
+            video.visible = true;
+            console.log(video);
+            videoList.push(video);
+            card = card.nextElementSibling;
+        }
+        return videoList;
+    }
+
+    function createTheSearchAndSetup() {
+        var search = document.querySelector(".searchInput");
+        search.oninput = function () {
+            determineVisibility();
+        }
+    }
+    function determineVisibility() {
+        setAllVisible();
+        determineSortVisibility();
+        populate(2);
+    }
+    function setAllVisible() {
+        for (var i = 0; i < listLessons.length; i++) {
+            console.log(listLessons[i]);
+            listLessons[i].visible = true;
+        }
+    }
+    function determineSortVisibility() { // search
+        var search = document.querySelector(".searchInput");
+        var searchText = search.value.toLowerCase();
+        if (searchText.length > 0) {
+            for (var i = 0; i < listLessons.length; i++) {
+                if (! listLessons[i].title.toLowerCase().includes(searchText)) {
+                    if (! listLessons[i].author.toLowerCase().includes(searchText)) {
+                        if (! listLessons[i].description.toLowerCase().includes(searchText)) {
+                            listLessons[i].visible = false;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    function populate(typeOfList) {
+        var areaForItems = document.querySelector(".lessons");
+        var lessons = areaForItems.querySelectorAll(".card");
+        if(lessons.length<1){
+            lessons= areaForItems.querySelectorAll(".listItem");
+        }
+        for (var i = 0; i < lessons.length; ++ i) {
+            
+            console.log(lessons.length);
+            if (! listLessons[i].visible) {
+                lessons[i].style.display = 'none';
+            } else {
+                lessons[i].style.display = 'flex';
+            }
+            switch (typeOfList) {
+                case 0:
+                    // list
+                    if (lessons[i].class === "listItem") {
+                        lessons[i].class = "card";
+                    }
+                    break;
+                case 2:
+                    // grid
+                    if (lessons[i].class === "card") {
+                        lessons[i].class = "listItem";
+                    }
+                    break;
+            }
+        }
+    }
+    // http://developer.blackberry.com/design/bb10/color.html
+</script

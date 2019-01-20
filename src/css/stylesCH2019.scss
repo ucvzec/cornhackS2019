@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 h1,
@@ -10,6 +9,26 @@ h4,
 h5,
 h6 {
   font-family: 'Ubuntu Mono', monospace;
+  color: black;
+}
+
+a:hover {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+  }
+
+  font-weight: bold;
+}
+
+a {
+
+  text-decoration: none;
 }
 
 body {
@@ -44,7 +63,6 @@ body {
   display: flex;
   flex-direction: row;
   background: #323232;
-  height: 100%;
 }
 
 .headerClass {
@@ -55,7 +73,7 @@ body {
 .nav {
   display: flex;
   flex-direction: row;
-  z-index: -1;
+  z-index: 0;
   position: fixed;
   justify-content: space-around;
   width: 100%;
@@ -238,7 +256,7 @@ body {
 .nav {
   display: flex;
   flex-direction: row;
-  z-index: -1;
+  z-index: 1;
   position: fixed;
   justify-content: space-around;
   width: 100%;
@@ -300,7 +318,7 @@ body {
 }
 
 video {
-  z-index: -1;
+  z-index: 0;
   width: 45vw;
   height: 30vw;
 }
@@ -312,10 +330,7 @@ video {
   width: 100%;
 }
 
-focusContent {
-  z-index: -1;
-  width: 100%;
-}
+
 
 .title {
   z-index: 1;
@@ -457,7 +472,7 @@ body {
 .nav {
   display: flex;
   flex-direction: row;
-  z-index: -1;
+  z-index: 0;
   position: fixed;
   justify-content: space-around;
   width: 100%;
@@ -551,11 +566,26 @@ body {
 
 .gridButton {
   padding-left: 30px;
+
+}
+
+.gridButton:hover {
+  font-weight: bold;
+
 }
 
 .listButton {
   margin-top: 15px;
+}
 
+.listButton:hover {
+  font-weight: bold;
+
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .searchInput {
