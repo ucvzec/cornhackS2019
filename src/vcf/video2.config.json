@@ -1,0 +1,13 @@
+{
+	"videoTitle": "Second Title",
+	"videoPath": "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+	
+	"thumbnailPath": "",
+
+	"author":"Michael Kovar",
+	"publishedDate":"11-25-1950",
+
+	"videoDescriptionPath": "../static/vid2.txt",
+	"videoArticlePath": "",
+	"id": "000001`"
+}
