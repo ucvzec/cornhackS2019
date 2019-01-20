@@ -1,11 +1,5 @@
 window.onload = function () {
-    if (window.location.href.includes("video")) {
-        document.querySelector(".headerClass").innerHTML=twigGetReturnHeader();
 
-    } else {
-        document.querySelector(".headerClass").innerHTML=twigGetTwoLayerHeader();
-
-    }
 
     var titleHeight = document.querySelector(".title").offsetHeight;
 
@@ -27,20 +21,4 @@ window.onscroll = function () {
         console.log(titleHeight);
         document.querySelector('.nav').style.top = pos + 'px';
     }
-}
-
-function twigGetTwoLayerHeader() {
-    return Twig.renderFile('./src/view/headerTwoLayer.twig', {
-        video: video
-    }, (err, html) => {
-        console.log(html); // compiled string
-    });
-}
-
-function twigGetReturnHeader() {
-    return Twig.renderFile('./src/view/returnHeader.twig', {
-        video: video
-    }, (err, html) => {
-        console.log(html); // compiled string
-    });
 }
