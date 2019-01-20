@@ -35,14 +35,19 @@ server.get('/:requestedCategory/:file',(req,res)=>{
 
 	if( config.assetCategories.includes(req.params.requestedCategory) ){
 		
-		let filePath = path.resolve(__dirname, assetCategory, `${file}`);
+		let filePath = path.resolve(__dirname,"..", assetCategory, `${file}`);
 		
 		if(fs.existsSync(filePath)){
 			res.status(200).sendFile(filePath);
+			return;
+		}else{
+			console.log(`Requested asset file did not exist using ${filePath}`);
 		}
+	}else{
+		console.log(`Requested asset ${req.originalUrl} was not a valid asset category`);
 	}
-	//https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 	res.status(404).end();
+	//https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 });
 server.get('/lessonpage',(req,res)=>{
