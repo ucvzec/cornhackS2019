@@ -3,7 +3,7 @@ window.onload = function () {
         document.querySelector(".headerClass").innerHTML=twigGetReturnHeader();
 
     } else {
-        document.querySelector(".headerClass").appendChild(twigGetTwoLayerHeader());
+        document.querySelector(".headerClass").innerHTML=twigGetTwoLayerHeader();
 
     }
 
@@ -33,7 +33,7 @@ function twigGetTwoLayerHeader() {
     return Twig.renderFile('./src/view/headerTwoLayer.twig', {
         video: video
     }, (err, html) => {
-        html; // compiled string
+        console.log(html); // compiled string
     });
 }
 
@@ -41,6 +41,6 @@ function twigGetReturnHeader() {
     return Twig.renderFile('./src/view/returnHeader.twig', {
         video: video
     }, (err, html) => {
-        html; // compiled string
+        console.log(html); // compiled string
     });
 }
