@@ -86,6 +86,7 @@ function populate(typeOfList) {
     while (areaForItems.hasChildNodes()) {
         areaForItems.removeChild(areaForItems.lastChild);
     }
+    //TODO Reimplement this
     for (var i = 0; i < listLessons.length; ++i) {
         if (listLessons[i].visible) {
             switch (typeOfList) {
