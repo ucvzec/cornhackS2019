@@ -4,10 +4,10 @@
 	
 	"thumbnailPath": "",
 
-	"author":"",
-	"publishedDate":"",
+	"author":"Tommy Braccia",
+	"publishedDate":"1-1-2018",
 
 	"videoDescriptionPath": "../static/test.txt",
 	"videoArticlePath": "",
-	"videoid": ""
+	"videoid": "000000"
 }
