@@ -90,3 +90,135 @@
 	}. ║
 ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:29:26: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:29:26: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:31:07: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:31:07: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:32:21: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:32:21: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:32:34: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:32:34: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:33:33: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:33:33: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:34:55: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:34:55: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:35:27: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:35:27: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:36:20: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:36:20: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:36:49: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:36:49: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:38:33: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:38:33: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:41:06: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:41:06: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:42:06: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:42:06: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:42:29: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:42:29: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:43:16: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:43:16: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:44:23: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
+19:44:23: Successfully created all 1 VCF objects.

@@ -1,4 +1,3 @@
-import Twig from 'twig';
 var listLessons = [{
         name: "site one",
         imageURL: "https://1.bp.blogspot.com/--M8WrSToFoo/VTVRut6u-2I/AAAAAAAAB8o/dVHTtpXitSs/s1600/URL.png",
@@ -80,45 +79,4 @@ function determineSortVisibility() {
         }
     }
 }
-
-function populate(typeOfList) {
-    var areaForItems = document.querySelector(".lessons");
-    while (areaForItems.hasChildNodes()) {
-        areaForItems.removeChild(areaForItems.lastChild);
-    }
-    for (var i = 0; i < listLessons.length; ++i) {
-        if (listLessons[i].visible) {
-            switch (typeOfList) {
-                case 0:
-                    //list
-                    areaForItems.appendChild(createListLongVideo(listLessons[i]));
-                    break;
-                case 2:
-                    //grid
-                    areaForItems.appendChild(createCardVideo(listLessons[i]));
-                    break;
-            }
-        }
-    }
-}
-
-
-function createListLongVideo(video) {
-    return Twig.renderFile('./src/view/videoListItem.twig', {
-        video: video
-    }, (err, html) => {
-        html; // compiled string
-    });
-
-}
-
-function createCardVideo(video) {
-    return Twig.renderFile('./src/view/videoCard.twig', {
-        video: video
-    }, (err, html) => {
-        html; // compiled string
-    });
-}
-
-
 //http://developer.blackberry.com/design/bb10/color.html

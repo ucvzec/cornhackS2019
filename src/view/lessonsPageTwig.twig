@@ -1,28 +1,30 @@
 <head>
-    <script src="src/js/lessonList.js"></script>
-    <link rel="stylesheet" href="src/css/stylesCornHacks2019.css">
-        <script src="src/js/headerPos.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet"></head>
-        <body>
-            <div class="homePage">
-                <div class="headerClass">
-                    {% include 'twigElements/headerTwoLayer.twig' %}
-                </div>
-                <div class="bodyClass">
-                    <div class="sideBar"></div>
-                    <div class="focusContent">
-                        <div class="lessons">
-                            <div class="lessonOptions">
-                                <input class="searchInput" placeholder="Search the site" type="search"/>
-                                <div class="rightAlignRow">
-                                    <h1 class='listButton'></h1>
-                                    <h1 class="gridButton"></h1>
-                                </div>
-                            </div>
-                            <div class="list"></div>
+    <link type="text/css" rel="stylesheet" href="css/stylesCornHacks2019.css"/>
+        <script src="js/headerPos.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet"/></head>
+<body>
+    <div class="homePage">
+        <div class="headerClass">
+            {% include 'twigElements/headerTwoLayer.twig' %}
+        </div>
+        <div class="bodyClass">
+            <div class="sideBar"></div>
+            <div class="focusContent">
+                <div class="lessons">
+                    <div class="lessonOptions">
+                        <input class="searchInput" placeholder="Search the site" type="search"/>
+                        <div class="rightAlignRow">
+                            <h1 class='listButton'></h1>
+                            <h1 class="gridButton"></h1>
                         </div>
+                    </div>
+                    <div class="list">
+                        {% for video in videoList %}
+                            {% include './twigElements/videoCard.twig' %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
-        </body>
-    
+        </div>
+    </div>
+</body>
