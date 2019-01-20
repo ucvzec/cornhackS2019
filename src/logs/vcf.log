@@ -298,3 +298,11 @@
 19:55:31: Successfully created all 1 VCF objects.
 19:55:33: Sucessfully loaded description from C:\Users\michael cool guy\Documents\Javascript Projects\cornhackS2019\src\static\test.txt
 19:55:33: Successfully created all 1 VCF objects.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:59:28: Sucessfully loaded description from C:\Users\bracc\Documents\GitHub\cornhackS2019\src\static\test.txt
+19:59:28: Successfully created all 1 VCF objects.

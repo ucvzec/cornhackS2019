@@ -374,3 +374,13 @@
 19:55:29: Set view engine variables.
 19:55:29: Finished setting up routes.
 19:55:29: Server is now running on port 80.
+: ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Started logging at: timeStamp(){
+		return new Date().toLocaleTimeString('en-US',{hour12:false});
+	}. ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+19:59:16: Loaded Dependencies.
+19:59:16: Set view engine variables.
+19:59:16: Finished setting up routes.
+19:59:16: Server is now running on port 80.
