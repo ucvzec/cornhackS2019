@@ -57,7 +57,7 @@ server.get(resourceRegex,(req,res,next)=>{
 		return;
 	}
 });
-server.get(/^(?:lesson[s]?)((?:page|menu)?[s]?)$/i,(req,res)=>{
+server.get(/^\/(?:lesson[s]?)((?:page|menu)?[s]?)$/i,(req,res)=>{
 	logger.logAndConsole(`Rendered lesson page from absolute route.`);
 	res.render('lessonListPage', {
 		videoList: readVCF(path.resolve(__dirname,"..","vcf"),{
