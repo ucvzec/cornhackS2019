@@ -38,19 +38,19 @@ class Logger{
 	}
 
 	startMessageLog(){
-		this.logLine(this.boxMessage(`Started logging at: ${this.timeStamp}.`),false);
+		this.logLine(this.boxMessage(`Started logging at: ${this.timeStamp()}.`),false);
 	}
 
 	endMessageLog(){
-		this.logLine(this.boxMessage(`Ended logging at: ${this.timeStamp}.`),false);
+		this.logLine(this.boxMessage(`Ended logging at: ${this.timeStamp()}.`),false);
 	}
 
-	logLine(logMessage,timeStamp=true){
-		fs.appendFileSync(this.logPath,`${timeStamp?this.timeStamp():""}: ${logMessage}${os.EOL}`);
+	logLine(logMessage,stamp=true){
+		fs.appendFileSync(this.logPath,`${stamp?`${this.timeStamp()} `:""}${logMessage}${os.EOL}`);
 	}
-	logAndConsole(logMessage,timeStamp=true){
+	logAndConsole(logMessage,stamp=true){
 		console.log(logMessage);
-		this.logLine(logMessage,timeStamp);
+		this.logLine(logMessage,stamp);
 	}
 
 }
