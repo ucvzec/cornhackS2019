@@ -7,7 +7,7 @@
 	"author": "Tommy Braccia",
 	"publishedDate": "1-1-2018",
 
-	"videoDescriptionPath": "../static/vid1.txt",
+	"videoDescriptionPath": "static/vid1.txt",
 	"videoArticlePath": "",
 	"id": "000"
 }

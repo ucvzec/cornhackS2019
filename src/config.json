@@ -8,14 +8,18 @@
 	"assetCategories": [
 		"img",
 		"js",
-		"css"
+		"css",
+		"media",
+		"static"
 	],
 	"resourceTypes": [
 		"js",
 		"css",
 		"png",
 		"jpg",
-		"ico"
+		"ico",
+		"mp4",
+		"txt"
 	],
 
 	"staticTopLevelPages": {

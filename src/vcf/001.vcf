@@ -7,7 +7,7 @@
 	"author":"Michael Kovar",
 	"publishedDate":"11-25-1950",
 
-	"videoDescriptionPath": "../static/vid2.txt",
+	"videoDescriptionPath": "static/vid2.txt",
 	"videoArticlePath": "",
 	"id": "001`"
 }
