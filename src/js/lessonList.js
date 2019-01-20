@@ -30,7 +30,7 @@ function retrieveFields() {
         video.date = temp[1];
 
         video.description = infoContainer.childNodes[5].textContent;
-
+        video.visible=true;
         videoList.push(video);
         card = card.nextElementSibling;
     }
