@@ -126,7 +126,9 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card h1, .card h2, .card h3 {
+.card h1,
+.card h2,
+.card h3 {
   margin: 3px;
 }
 
@@ -451,14 +453,6 @@ body {
   display: flex;
 }
 
-.listButton:before {
-  content: "&#9776;";
-}
-
-.gridButton:before {
-  content: "&#9638;";
-}
-
 .backArrow {
   z-index: 3;
   position: fixed;
@@ -474,6 +468,22 @@ body {
 .backArrow a {
   color: white;
   text-decoration: none;
+}
+
+.gridButton {
+  padding-left: 30px;
+}
+
+.listButton {
+  margin-top: 15px;
+}
+
+.searchInput {
+  background: #969696;
+  border: 0px;
+  height: 3%;
+  margin: 20px;
+  width: 50%;
 }
 
 /*# sourceMappingURL=stylesCornHacks2019.css.map */

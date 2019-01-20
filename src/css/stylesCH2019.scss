@@ -527,17 +527,6 @@ body {
   display: flex;
 }
 
-.listButton {
-  &:before {
-    content: "&#9776;";
-  }
-}
-
-.gridButton {
-  &:before {
-    content: "&#9638;";
-  }
-}
 
 .backArrow {
   z-index: 3;
@@ -560,6 +549,13 @@ body {
   text-decoration: none;
 }
 
+.gridButton{
+  padding-left:30px;
+}
+.listButton{
+  margin-top: 15px;
+
+}
 .searchInput {
   background: #969696;
   border: 0px;
