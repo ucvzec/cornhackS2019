@@ -126,6 +126,9 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.card h1, .card h2, .card h3 {
+  margin: 3px;
+}
 
 .list {
   display: flex;
