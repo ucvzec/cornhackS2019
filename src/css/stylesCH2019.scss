@@ -532,3 +532,21 @@ body {
     content: "&#9638;";
   }
 }
+
+.backArrow {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 10px;
+  h1 {
+    text-decoration: none;
+  }
+  a {
+      color: white;
+  text-decoration: none;
+
+  }
+  text-decoration: none;
+}
