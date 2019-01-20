@@ -9,6 +9,7 @@ h4,
 h5,
 h6 {
   font-family: "Ubuntu Mono", monospace;
+  color: black;
 }
 
 body {
@@ -50,7 +51,7 @@ body {
 .nav {
   display: flex;
   flex-direction: row;
-  z-index: -1;
+  z-index: 0;
   position: fixed;
   justify-content: space-around;
   width: 100%;
@@ -206,7 +207,7 @@ body {
 .nav {
   display: flex;
   flex-direction: row;
-  z-index: -1;
+  z-index: 1;
   position: fixed;
   justify-content: space-around;
   width: 100%;
@@ -258,7 +259,7 @@ body {
 }
 
 video {
-  z-index: -1;
+  z-index: 0;
   width: 45vw;
   height: 30vw;
 }
@@ -267,11 +268,6 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-}
-
-focusContent {
-  z-index: -1;
   width: 100%;
 }
 
@@ -392,7 +388,7 @@ body {
 .nav {
   display: flex;
   flex-direction: row;
-  z-index: -1;
+  z-index: 0;
   position: fixed;
   justify-content: space-around;
   width: 100%;

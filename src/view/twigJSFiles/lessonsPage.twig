@@ -2,6 +2,15 @@
     var listLessons;
     // need to get var list lessons
     window.onload = function () {
+        
+    var titleHeight = document.querySelector(".title").offsetHeight;
+
+        document.querySelector(".nav").style.top = titleHeight + "px";
+        var headerHeight =
+            document.querySelector(".title").offsetHeight +
+            document.querySelector(".nav").offsetHeight;
+        document.querySelector(".bodyClass").style.marginTop = headerHeight + "px";
+
         listLessons = retrieveFields();
         createTheSearchAndSetup();
         setAllVisible();
@@ -31,9 +40,7 @@
         }
         return videoList;
     }
-    module.exports = {
-        retrieveFields
-    }
+
     function createTheSearchAndSetup() {
         var search = document.querySelector(".searchInput");
         search.oninput = function () {
