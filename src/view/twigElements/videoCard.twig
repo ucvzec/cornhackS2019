@@ -1,11 +1,21 @@
 <div class="card" id="{{video.id}}">
-    <video controls height='100' width='125'>
-        <source src="{{video.videoPath}}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="columnListItem">
-            <h1>{{video.videoTitle}}</h1>
-                <h3>{{video.author}} - {{video.publishedDate}}</h3>
-            <h2>{{video.videoDescription}}</h2>
+
+        <video controls height='100' width='125'>
+            <source src="{{video.videoPath}}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="/video/{{video.id}}"
+
+            <div class="columnListItem">
+                <h1>
+                    {{video.videoTitle}}</h1>
+                <h3>
+                    {{video.author}}
+                    -
+                    {{video.publishedDate}}</h3>
+                <h2>
+                    {{video.videoDescription}}</h2>
+            </div>
+                </a>
+
         </div>
-    </div>

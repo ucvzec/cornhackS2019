@@ -1,0 +1,23 @@
+A famous programming interview problem goes along these lines; count up starting from one, and if the current number you are on meets some first condition, print out ‘Fizz’. Next, if that same number you are on meets some other secondary condition, print ‘Buzz’. Going through any n number of conditionals I have, each time you meet a condition you print out the word that conditional causes. If there is no conditional met with this number, then simply print out the number you are currently on. This is called the “Fizz-Buzz” question, or exercise.
+Let’s say I give you these three conditionals, letting X represent the number we are currently on.
+Conditionals:
+If X mod 3 is equal to 0, print ‘Fizz’.
+If X mod 6 is equal to 0, print ‘Buzz’.
+If X mod 7 is equal to 0, print ‘Wham’.
+Notice that I didn’t specify that your code must print the word immediately upon meeting any of the conditionals.
+Looking for details like this, where you have more control over deciding how to handle a problem is key for programmers; it allows us to think outside of the box and come up with our own, unique, and creative problem solutions.
+Because there isn’t a requirement for the code to print immediately, we could take advantage of that and only print once we check all out conditionals.
+To ensure the words are printed in this order: first matched conditional to last matched conditional, we can use a number of built-in options when using Java. In this first part we will cover utilizing Arrays, and ArrayLists while explaining how a Programmer might think in order to solve this problem. We will also show and explain examples of implemented Java code for these two utilizations, as well as give opinions of both.
+
+In this first example, we will use an Array of Strings to store the words we receive from our conditionals. 
+String Arrays are good for storing individual strings that need to be kept separate from each other, but they do not change size. Because of this, we would always have to set the size to the total number of conditionals we have, and more often than not we would likely not be using all of them, unless we used conditionals that are very frequently positive.
+In this utilization, if at least one of the conditionals are met, then at least one of the spots in the array will contain a String and not be null or empty. 
+So if we move each String in each spot of the array into a String called “accruedString” , and check to see if the accruedString is empty or has a length of zero, then we can immediately check for if we should print the current number, or the words we receive from our conditional. 
+If we need to print the words, then we would have them at the ready to print without having to do more looping through our accruedStringArray.
+
+In this second example, we will use an ArrayList of Strings to store the words we receive from our conditionals.
+ArrayLists are good for storing individual things that need to be kept separate from each other, and they easily change size. However, each time one changes size it creates another empty arrayList of the newly needed size before copying each element that will be copied over, one by one. This effectively means while the array is changing size it is effectively taking double its normal memory space. 
+Although we would likely not have nearly enough conditionals to reach a point where this temporary memory space doubling would become significant, we should always practice looking for the best solutions, and so we might not use this if we have a significantly large number of conditionals to meet, or limited memory space for our program to use.
+In this utilization, if at least one of the conditionals are met, then at least one of the spots in the ArrayList<String> will contain a String and not be null. 
+So if we move each String in each spot of the ArrayList<String> into a String called “accruedString” , and check to see if the accruedString is empty or has a length of zero, then we can immediately check for if we should print the current number, or the words  we have received from our conditionals. 
+If we need to print the words, then we would also then have them ready to print without having to do more looping through our accruedStringArrayList.

@@ -1,15 +1,6 @@
 <script>
     var listLessons=null;
     // need to get var list lessons
-    window.onload = function () {
-        
-    var titleHeight = document.querySelector(".title").offsetHeight;
-
-        document.querySelector(".nav").style.top = titleHeight + "px";
-        var headerHeight =
-            document.querySelector(".title").offsetHeight +
-            document.querySelector(".nav").offsetHeight;
-        document.querySelector(".bodyClass").style.marginTop = headerHeight + "px";
 
         listLessons = retrieveFields();
         console.log(listLessons);
@@ -24,6 +15,15 @@
         document.querySelector(".gridButton").addEventListener("click", () => {
             populate(1);
         });
+
+    var titleHeight = document.querySelector(".title").offsetHeight;
+
+        document.querySelector(".nav").style.top = titleHeight + "px";
+        var headerHeight =
+            document.querySelector(".title").offsetHeight +
+            document.querySelector(".nav").offsetHeight;
+        document.querySelector(".bodyClass").style.marginTop = headerHeight + "px";
+
     };
     function retrieveFields() {
         let videoList = [];

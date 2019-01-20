@@ -1,0 +1,32 @@
+A famous programming interview problem goes along these lines; count up starting from one, and if the current number you are on meets some first condition, print out ‘Fizz’. Next, if that same number you are on meets some other secondary condition, print ‘Buzz’. Going through any n number of conditionals I have, each time you meet a condition you print out the word that conditional causes. If there is no conditional met with this number, then simply print out the number you are currently on. This is called the “Fizz-Buzz” question, or exercise.
+Let’s say I give you these three conditionals, letting X represent the number we are currently on.
+Conditionals:
+If X mod 3 is equal to 0, print ‘Fizz’.
+If X mod 6 is equal to 0, print ‘Buzz’.
+If X mod 7 is equal to 0, print ‘Wham’.
+Notice that I didn’t specify that your code must print the word immediately upon meeting any of the conditionals.
+Looking for details like this, where you have more control over deciding how to handle a problem is key for programming; it allows one to think outside of the box and come up with our own, unique, and creative problem solution.
+Because there isn’t a requirement for the code to print immediately, we could take advantage of that and print only once, after we check all of the conditionals.
+To ensure the words are printed in this order: first matched conditional to last matched conditional, we can use a number of built-in options when using Java. In this second part we will cover utilizing LinkedLists, and Strings while explaining how a Programmer might think in order to solve this problem. We will also show and explain examples of implemented Java code for these two utilizations, as well as give opinions of both.
+
+In this first example, we will use a LinkedList to store the words we receive from our conditionals. 
+If at least one of the conditionals are met, then the LinkedList will contain at least one String we can access
+Because we can check the size of our LinkedList, we can reverse the order of our previous implementations in part 1, and check to see if we have a String to print out before we gather its parts so we don’t have to iterate through our word storing device a second time.
+We can do this by checking the size of the LinkedList; if the LinkedList is empty, or has a size of 0, then we can know immediately we did not match any of our conditionals and have no words to return, so we can return the currentNumber.
+If the LinkedList does contain things (in our case just Strings), then we can iterate through it, and return a String containing all the strings from within our LinkedList to be printed out.
+Utilizing ‘Nodes’, which are visualizable as individual objects that hold a single piece of information and ‘point’ to either just the next Node in the list or both the next and previous Node, a Node-List is like an ArrayList without the temporary memory doubling issue. 
+How? This is achieved thanks to individual Node addition, removal, and manipulation. Since the entire list or chain of Nodes is made of individual connections, unlike a fillable single structure such as an Array or an ArrayList, the individual Nodes can be added, removed, moved, and have their stored data manipulated without the need to create a new copy of the entire Node-List.
+There are many, many more utilizations of Node-Lists within the fields of digital memory, such as using ‘Node-Trees’ to more efficiently store, order, sort, and manipulate information. This is a very deep and complex subject that we might handle later, but for this lesson it is not of importance to know these details.
+Traversing a Node-List isn’t always easy for those new to using it, but its functionality still makes it a decent candidate for holding our Strings for when we need to print them.
+This option would also be incredibly useful if we were required to handle objects, instead of Strings, when our conditionals were matched, because each Node can hold a unique object of its own to store information in.
+
+In this second example, we will use a String to store the words receive from our conditionals.
+Why? Aren’t our Strings supposed to be individual? And kept separate? How will we achieve that without using an individual String variable for each conditional?
+Notice that before, we realised we could print out all our acquired Strings at once after we finished checking all our conditionals, so if we put all our acquired Strings into one, we only have to print a single String to achieve our goal.
+We can create a new, blank and empty String called “accruedString” before we check our conditionals. As we check them, we can add each matched conditional’s string to the accruedString, and by the time we reach the end, the accruedString is either empty, or contains the matched conditionals. If it is empty, we can simply print the number we are on, but if it is not empty then we print it!
+Because of the simplicity, and the much lower memory usage than any of the other 
+options we’ve listed before, this is the best candidate, and we would recommend using this method when writing a Fizz-Buzz-esque program whose conditionals make you recieve Strings.
+If at least one of the conditionals are met, then the String will have a length greater than 0.
+Because we can check the size of our String, like the LinkedList example, we can reverse the order of what we have done before in part 1; we can check to see if we have met any conditionals and can print them out.
+We simply need to check if the accruedString’s length is greater than zero, an instant indicator for us that we have matched at least one conditional. Also, our String is already gathered together and in order, so we can return it as-is.
+If our accruedString is empty, or has a length of zero, then we simply return the currentNumber.
