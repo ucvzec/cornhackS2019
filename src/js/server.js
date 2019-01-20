@@ -4,10 +4,12 @@ const fs = require("fs");
 const express = require("express");
 const twig = require("twig");
 
-const {readVCF} = require(path.resolve(__dirname,"readVCF.js"));
+const {readVCF,readVCFDir} = require(path.resolve(__dirname,"readVCF.js"));
 const logger = require(path.resolve(__dirname,"logger.js"))("server");
 
 const config = require(path.resolve(__dirname,"..","config.json"));
+
+const vcfPath = path.resolve(__dirname,"..","vcf");
 
 logger.logLine("Loaded Dependencies.");
 
@@ -34,7 +36,7 @@ server.get(htmlRegex,(req,res,next)=>{
 let assetCategoryOr = config.assetCategories.join("|");
 let resourceTypeOr = config.resourceTypes.join("|");
 
-let resourceRegex = new RegExp(`^\/(${assetCategoryOr})\/([a-zA-Z0-9]+)\.(${resourceTypeOr})`);
+let resourceRegex = new RegExp(`\/(?:[a-zA-Z0-9\?\+\=\!\@\#\$\%\^\&\*\(\)\-\=\|\'\"]+\/){0,}(${assetCategoryOr})\/([a-zA-Z0-9]+)\.(${resourceTypeOr})`);
 
 //the parameters that are stored are:
 //0: category | 1: resourceName | 2: resourceType
@@ -53,17 +55,39 @@ server.get(resourceRegex,(req,res,next)=>{
 		return;
 	}else{
 		logger.logAndConsole(`Requested asset file did not exist using ${filePath}`);
-		res.status(404).end();
+		page404(res);
 		return;
 	}
 });
-server.get(/^\/(?:lesson[s]?)((?:page|menu)?[s]?)$/i,(req,res)=>{
+
+//lessonlist page route
+server.get(/^\/(?:lesson[s]?|activit(?:y|ies))((?:page|menu)?[s]?)$/i,(req,res)=>{
 	logger.logAndConsole(`Rendered lesson page from absolute route.`);
+	
+	let videoList = readVCFDir(vcfPath,{
+		description:true
+	});
+
 	res.render('lessonListPage', {
-		videoList: readVCF(path.resolve(__dirname,"..","vcf"),{
-			description:true
-		}),
+		videoList,
 	})
+});
+
+//lesson page dynamic router
+//parameters: 0: video id
+server.get(/^\/(?:lesson|video)[s]?\/([0-9]+)$/,(req,res,next)=>{
+
+	let videoId = req.params[0];
+
+	let video = readVCF(vcfPath,`${videoId}.vcf`);
+
+	if(video !== null){
+		res.render('videoPage',{
+			video,
+		});
+	}else{
+		page404(res);
+	}
 });
 
 //this handles all of the static first level pages, and serves them if they are matched
@@ -77,7 +101,6 @@ server.get('/*',(req,res,next)=>{
 		logger.logAndConsole(`Rendered ${pageName} using top level static.`);
 
 		res.render(twigAlisas,{
-
 		});
 		return;
 	}else{
@@ -87,7 +110,7 @@ server.get('/*',(req,res,next)=>{
 });
 
 server.get('/*',(req,res)=>{
-	logger.logAndConsole(`Reached end route and recieved no instructions for ${req.originalUrl}`);
+	logger.logAndConsole(`Reached end route and recieved no instructions for ${req.path} from ${req.get("Referer")}`);
 	res.send("end route");
 });
 
@@ -96,3 +119,7 @@ logger.logLine("Finished setting up routes.");
 server.listen(config.port,()=>{
 	logger.logAndConsole(`Server is now running on port ${config.port}.`);
 });
+
+function page404(res){
+	return res.status(404).end();
+}

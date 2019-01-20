@@ -1,13 +1,13 @@
 {
 	"videoTitle": "Test Title",
 	"videoPath": "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-	
+
 	"thumbnailPath": "",
 
-	"author":"Tommy Braccia",
-	"publishedDate":"1-1-2018",
+	"author": "Tommy Braccia",
+	"publishedDate": "1-1-2018",
 
 	"videoDescriptionPath": "../static/vid1.txt",
 	"videoArticlePath": "",
-	"id": "000000"
+	"id": "000"
 }
